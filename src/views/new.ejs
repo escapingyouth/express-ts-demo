@@ -7,12 +7,21 @@
 		<title>New User</title>
 	</head>
 	<body>
-		<form action="/users">
-			<label for="username">Enter username</label>
-			<input type="text" placeholder="username" />
-			<label for="comment">Comment Text</label>
+		<h1>Create new comment</h1>
+		<form action="/users" method="post">
+			<div>
+				<label for="username">Enter username:</label>
+				<br />
+				<input type="text" placeholder="username" />
+			</div>
 			<br />
-			<textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+			<div>
+				<label for="comment">Comment text</label>
+				<br />
+				<textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+			</div>
+			<br />
+			<button>Submit</button>
 		</form>
 	</body>
 </html>
