@@ -5,5 +5,5 @@ export const getUsers: RequestHandler = (req, res, next) => {
 	res.render('show', { users });
 };
 export const createUser: RequestHandler = (req, res, next) => {
-	// res.render('new', { users });
+	res.render('new');
 };
