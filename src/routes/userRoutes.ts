@@ -1,10 +1,17 @@
 import { Router } from 'express';
-import { getUsers, createUser, addUser } from '../controllers/userController';
+import {
+	getAllCommentData,
+	createNewComment,
+	postComment,
+	getSpecificCommentData
+} from '../controllers/userController';
 
 const router = Router();
 
-router.get('/users', getUsers);
+router.get('/comments', getAllCommentData);
 
-router.get('/users/new', createUser);
-router.post('/users', addUser);
+router.get('/comments/new', createNewComment);
+
+router.post('/comments', postComment);
+router.get('/comments/:id', getSpecificCommentData);
 export default router;

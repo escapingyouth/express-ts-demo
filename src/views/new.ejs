@@ -8,11 +8,16 @@
 	</head>
 	<body>
 		<h1>Create new comment</h1>
-		<form action="/users" method="post">
+		<form action="/comments" method="post">
 			<div>
 				<label for="username">Enter username:</label>
 				<br />
-				<input type="text" placeholder="username" />
+				<input
+					type="text"
+					id="username"
+					name="username"
+					placeholder="username"
+				/>
 			</div>
 			<br />
 			<div>
@@ -22,6 +27,8 @@
 			</div>
 			<br />
 			<button>Submit</button>
+			<br />
+			<a href="/comments">Back to comments</a>
 		</form>
 	</body>
 </html>
