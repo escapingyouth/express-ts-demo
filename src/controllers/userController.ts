@@ -42,3 +42,10 @@ export const updatetSpecificCommentData: RequestHandler = (req, res, next) => {
 	//redirect back to all comments
 	res.redirect('/comments');
 };
+
+export const deleteSpecificCommentData: RequestHandler = (req, res, next) => {
+	const { id } = req.params;
+	const commentIndex = comments.findIndex((comment) => comment.id === id);
+	comments.splice(commentIndex, 1);
+	res.redirect('/comments');
+};

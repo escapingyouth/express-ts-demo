@@ -5,7 +5,8 @@ import {
 	postComment,
 	getSpecificCommentData,
 	editSpecificCommentData,
-	updatetSpecificCommentData
+	updatetSpecificCommentData,
+	deleteSpecificCommentData
 } from '../controllers/userController';
 
 const router = Router();
@@ -28,4 +29,6 @@ router.get('/comments/:id/edit', editSpecificCommentData);
 // UPDATE - updates a particular comment
 router.patch('/comments/:id', updatetSpecificCommentData);
 
+// DELETE/DESTROY- removes a single comment
+router.delete('/comments/:id', deleteSpecificCommentData);
 export default router;
